@@ -1,7 +1,4 @@
 "use client";
-
-
-
 import { useState } from 'react';
 import React from 'react'
 
@@ -9,7 +6,7 @@ const create = () => {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
-    const handleSubmit=(e)=>{
+    const handleSubmit=async (e)=>{
         e.preventDefault();
         console.log({title,content});
     }

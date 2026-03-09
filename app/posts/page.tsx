@@ -1,11 +1,7 @@
 
 
 import React from 'react'
-
-const posts = [
-    { id: 1, title: "First Post", content: "Hello world" },
-    { id: 2, title: "Next.js is cool", content: "Learning routing" }
-]
+import { posts } from '../api/posts/route'
 
 const PostsPage = async () => {
   return (
@@ -15,7 +11,7 @@ const PostsPage = async () => {
             <div className='bg-amber-500'>
                 {posts.map((post) => (
                     <div key={post.id} className='flex flex-col p-2 m-2'>
-                        <h2>{post.title}</h2>
+                        <h2 className='font-bold text-xl text-cyan-200'>{post.title}</h2>
                         <p>{post.content}</p>
                     </div>
                 ))}
