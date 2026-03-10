@@ -73,10 +73,13 @@ export let posts = [
   }
 ];
 
+export async function GET() {
+    return NextResponse.json(posts);
+}
+
 export async function POST(request:Request){
     try {
         const body=await request.json();
-
         const newPost={
             id:posts.length+1,
             title:body.title,
@@ -85,16 +88,15 @@ export async function POST(request:Request){
             createdAt:new Date().toISOString().split('T')[0]
         };
         posts.push(newPost);
+        console.log(posts);
         return NextResponse.json(
-            {message:"post craeted!!"},
+            {message:"post created!!"},
             {status:201}
         )
-        
     } catch (error) {
         return NextResponse.json({
             error:"Failed"},
             {status:500}
-        );
-        
+        ); 
     }
 }
