@@ -21,7 +21,7 @@ const PostPage =async  ({params}) => {
                 <>
                     <h1 className='bold text-3xl align-middle flex justify-center'>POST ID: {id}</h1>
                     <div className='bg-amber-500'>
-                        <h2 className='text-bold text-cyan-200 text-2xl m-2'>{data.data.title}</h2>
+                        <h2 className='text-bold text-cyan-300 text-2xl m-2'>{data.data.title}</h2>
                         <p className='m-2'>{data.data.content}</p>
                     </div>
                 </>
